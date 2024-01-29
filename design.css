@@ -1,38 +1,48 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 header {
     background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    color: white;
     text-align: center;
+    padding: 20px 0;
 }
 
-nav ul {
+.navbar ul {
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
+.navbar ul li {
     display: inline;
     margin: 0 10px;
 }
 
-nav ul li a {
-    color: #fff;
+.navbar a {
+    color: white;
     text-decoration: none;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.2em;
 }
 
 section {
     padding: 20px;
-    margin-top: 20px;
+    text-align: center;
 }
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 10px 0;
 }
