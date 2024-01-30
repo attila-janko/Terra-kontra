@@ -109,30 +109,6 @@
                     document.getElementById('timer').innerHTML = "Event Started";
                 }
             }, 1000);
-    
-
-                // Animate sections on scroll
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = 1;
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    });
-                }, { threshold: 0.5 });
-
-                sections.forEach(section => {
-                    observer.observe(section);
-                });
-
-                // Responsive navigation
-                navButton.textContent = '☰';
-                navButton.classList.add('nav-toggle');
-                navbar.appendChild(navButton);
-                navButton.addEventListener('click', () => {
-                    document.querySelector('.nav-links').classList.toggle('active');
-                });
-
                 // Active link highlighting
                 const updateActiveLink = (entries) => {
                     entries.forEach(entry => {
