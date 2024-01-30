@@ -3,63 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Terra Kontra III Festival</title>
-    <figure>
-        <img src="img/logo.jpg" alt="Terra Logo" 
-        width="10"
-        height="10">
-    </figure>
 </head>
 <body>
-    <nav class="container-fluid">
-        <ul>
-            <li><strong>Terra Kontra III</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#lineup">Line-up</a></li>
-            <li><a href="#tickets" role="button">Tickets</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="img/logo.jpg" alt="Terra Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#lineup">Line-up</a></li>
+                <li><a href="#tickets">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main class="container">
-        <div class="grid">
-            <section>
-                <hgroup>
-                    <h2>Welcome to Terra Kontra III</h2>
-                    <h3>The Ultimate Festival Experience</h3>
-                </hgroup>
-                <p>Join us for an unforgettable journey of music, art, and cultural fusion at Terra Kontra III. Immerse yourself in the rhythms of diverse genres and the beauty of artistic expression.</p>
-                
-                <h3>Event Details</h3>
-                <p>Date: July 15-17, 2024<br>Location: Green Meadows, Sunshine City</p>
-                <h3>What to Expect</h3>
-                <p>From electrifying performances to interactive art installations, Terra Kontra III offers a blend of activities and attractions for everyone.</p>
-            </section>
-        </div>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Terra Kontra III</h1>
+            <p>The Ultimate Festival Experience</p>
+        </section>
+
+        <section id="about" class="event-details">
+            <h2>Event Details</h2>
+            <p>Date: July 15-17, 2024<br>Location: Green Meadows, Sunshine City</p>
+            <h3>What to Expect</h3>
+            <p>From electrifying performances to interactive art installations, Terra Kontra III offers a blend of activities and attractions for everyone.</p>
+        </section>
+
+        <section id="lineup" class="subscribe">
+            <h2>Stay Updated!</h2>
+            <p>Subscribe to Our Newsletter</p>
+            <form>
+                <input type="text" id="firstname" name="firstname" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section id="tickets" class="tickets-section">
+            <!-- ... -->
+        </section>
+        
     </main>
 
-    <section aria-label="Subscribe example">
-        <div class="container">
-            <article>
-                <hgroup>
-                    <h2>Stay Updated!</h2>
-                    <h3>Subscribe to Our Newsletter</h3>
-                </hgroup>
-                <form class="grid">
-                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required>
-                    <input type="email" id="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
-                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-                </form>
-            </article>
-        </div>
-    </section>
-
-    <footer class="container">
-        <small>
-            <a href="#">Privacy Policy</a> • <a href="#">Contact Us</a>
-        </small>
+    <footer>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact Us</a>
     </footer>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    
+        // Dynamic Navigation Highlighting
+        window.addEventListener('scroll', () => {
+            let navigationLinks = document.querySelectorAll('nav ul li a');
+            let fromTop = window.scrollY;
+    
+            navigationLinks.forEach(link => {
+                let section = document.querySelector(link.hash);
+    
+                if (
+                    section.offsetTop <= fromTop &&
+                    section.offsetTop + section.offsetHeight > fromTop
+                ) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    
+        // Subscription Form Handling
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+            // Further handling like AJAX request can be added here
+        });
+    </script>
+    
 </body>
 </html>
