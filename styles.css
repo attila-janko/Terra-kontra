@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-    background-color: #1a1a1a;
+    background-color: #7a216f;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,7 @@ footer a {
     }
 }
 .nav-links a.active {
-    color: #ff9800;
+    color: #d415a8;
 }
 .gallery {
     display: flex;
