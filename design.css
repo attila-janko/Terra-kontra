@@ -64,3 +64,19 @@ footer a {
 .nav-links a.active {
     color: #ff9800;
 }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.band {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.countdown {
+    text-align: center;
+    margin-top: 2rem;
+}
