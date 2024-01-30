@@ -88,7 +88,6 @@
         document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll('.nav-links a');
         const sections = document.querySelectorAll('section');
-        const hero = document.querySelector('.hero');
         const navbar = document.querySelector('.navbar');
         const navButton = document.createElement('button');
 
@@ -146,7 +145,7 @@
                     // More bands...
                 ];
 
-                const gallery = document.querySelector('.gallery');
+                
                 lineup.forEach(band => {
                     const bandDiv = document.createElement('div');
                     bandDiv.className = 'band';
