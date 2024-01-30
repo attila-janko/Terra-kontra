@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://static.cooltix.com/widget.js" defer></script>
     <title>Terra Kontra III Festival</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
     </header>
 
     <main>
-        <section id="next" class="next-event"></section>
+        <section id="next" class="next-event">
             <h2>Következő event: Terra Kontra 2nd birthday</h2>
             <p>2024. február 10. <br> Helyszín: Bálna</p>  
             <a href="#" class = "img">
@@ -45,22 +46,14 @@
                 Reméljük minden Terra Kontra szimpatizáns egyetért azzal, hogy ezen ott kell lenni!<br>
                 Elővételes jegyek:</p>
                 <button data-cooltix-event-products='65b39e0dd8bd8dacc87eb51d' >Jegyek megtekintése</button>
+        </section>
         <section id="about" class="event-details">
             <h2>Fesztivál részletek</h2>
-            <p>Dátum: július 10-13, 2024<br>Hely: Blues Hill Park, Felsőtárkány</p>
+            <p>Dátum: július 18-21, 2024<br>Hely: Blues Hill Park, Felsőtárkány</p>
             <h3>What to Expect</h3>
             <p>From electrifying performances to interactive art installations, Terra Kontra III offers a blend of activities and attractions for everyone.</p>
         </section>
 
-        <section id="lineup2" class="subscribe">
-            <h2>Stay Updated!</h2>
-            <p>Subscribe to Our Newsletter</p>
-            <form>
-                <input type="text" id="firstname" name="firstname" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Email Address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
         <section id="lineup" class="gallery">
             <h2>Line-up Gallery</h2>
             <!-- Gallery items will be populated here -->
@@ -142,7 +135,7 @@
             });
 
             // Countdown Timer
-            const eventDate = new Date('July 10, 2024 16:00:00').getTime();
+            const eventDate = new Date('July 18, 2024 16:00:00').getTime();
 
             const countdownFunction = setInterval(function() {
                 const now = new Date().getTime();
