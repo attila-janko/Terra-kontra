@@ -151,6 +151,55 @@
                     document.getElementById('timer').innerHTML = "Event Started";
                 }
             }, 1000);
+            // script.js
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const sections = document.querySelectorAll('section');
+            const hero = document.querySelector('.hero');
+
+            // Smooth scrolling
+            for (let link of navLinks) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Hero fade-in effect
+            window.onload = () => {
+                hero.style.opacity = 1;
+                hero.style.transform = 'translateY(0)';
+            };
+
+            // Animate sections on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Responsive navigation
+            // Add a button for toggling nav-links in mobile view
+            // ...
+
+            // Active link highlighting
+            // Update the 'active' class on navigation links based on section in view
+            // ...
+        });
+
+        // Additional functions for responsive navigation and active link highlighting
+        // ...
 
     </script>
     
