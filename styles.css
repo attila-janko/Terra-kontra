@@ -95,3 +95,22 @@ footer a {
     /* Other styles... */
     transition-delay: 0.3s; /* Delay for hero section */
 }
+
+.nav-toggle {
+    display: none;
+    background-color: #7a216f;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
