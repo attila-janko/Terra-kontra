@@ -83,93 +83,78 @@
         <a href="#">Privacy Policy</a>
         <a href="#">Contact Us</a>
     </footer>
+    
     <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
     
-        // Dynamic Navigation Highlighting
-        window.addEventListener('scroll', () => {
-            let navigationLinks = document.querySelectorAll('nav ul li a');
-            let fromTop = window.scrollY;
+            // Dynamic Navigation Highlighting
+            window.addEventListener('scroll', () => {
+                let navigationLinks = document.querySelectorAll('nav ul li a');
+                let fromTop = window.scrollY;
     
-            navigationLinks.forEach(link => {
-                let section = document.querySelector(link.hash);
+                navigationLinks.forEach(link => {
+                    let section = document.querySelector(link.hash);
     
-                if (
-                    section.offsetTop <= fromTop &&
-                    section.offsetTop + section.offsetHeight > fromTop
-                ) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+                    if (
+                        section.offsetTop <= fromTop &&
+                        section.offsetTop + section.offsetHeight > fromTop
+                    ) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
             });
-        });
     
-        // Subscription Form Handling
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for subscribing!');
-            // Further handling like AJAX request can be added here
-        });
-        // Gallery for Line-up
-            const lineup = [
-                { name: 'Band A', image: 'img/band-a.jpg' },
-                { name: 'Band B', image: 'img/band-b.jpg' },
-                // More bands...
-            ];
-
-            const gallery = document.querySelector('.gallery');
-            lineup.forEach(band => {
-                const bandDiv = document.createElement('div');
-                bandDiv.className = 'band';
-                bandDiv.innerHTML = `<img src="${band.image}" alt="${band.name}"><p>${band.name}</p>`;
-                gallery.appendChild(bandDiv);
-            });
-
             // Countdown Timer
-            const eventDate = new Date('July 14, 2024 00:00:00').getTime();
-
+            const eventDate = new Date('July 18, 2024 00:00:00').getTime(); // Correct event date
             const countdownFunction = setInterval(function() {
                 const now = new Date().getTime();
                 const distance = eventDate - now;
-
+    
                 document.getElementById('days').innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
                 document.getElementById('hours').innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 document.getElementById('minutes').innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 document.getElementById('seconds').innerText = Math.floor((distance % (1000 * 60)) / 1000);
-
+    
                 if (distance < 0) {
                     clearInterval(countdownFunction);
                     document.getElementById('timer').innerHTML = "Event Started";
                 }
             }, 1000);
-            
-            document.addEventListener("DOMContentLoaded", function () {
-                const navLinks = document.querySelectorAll('.nav-links a');
-                const sections = document.querySelectorAll('section');
-                const hero = document.querySelector('.hero');
-                const navbar = document.querySelector('.navbar');
-                const navButton = document.createElement('button');
+    
+                
+            // Subscription Form Handling
+            document.querySelector('form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for subscribing!');
+                // Further handling like AJAX request can be added here
+            });
+            // Gallery for Line-up
+                const lineup = [
+                    { name: 'Band A', image: 'img/band-a.jpg' },
+                    { name: 'Band B', image: 'img/band-b.jpg' },
+                    // More bands...
+                ];
 
-                // Smooth scrolling
-                for (let link of navLinks) {
-                    link.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        document.querySelector(targetId).scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    });
-                }
+                const gallery = document.querySelector('.gallery');
+                lineup.forEach(band => {
+                    const bandDiv = document.createElement('div');
+                    bandDiv.className = 'band';
+                    bandDiv.innerHTML = `<img src="${band.image}" alt="${band.name}"><p>${band.name}</p>`;
+                    gallery.appendChild(bandDiv);
+                });
 
+    
                 // Hero fade-in effect
                 window.onload = () => {
                     hero.style.opacity = 1;
@@ -219,9 +204,12 @@
                 sections.forEach(section => {
                     sectionObserver.observe(section);
                 });
-            });
 
+       
+        });
     </script>
+
+    
     
 </body>
 </html>
