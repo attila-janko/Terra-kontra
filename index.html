@@ -85,11 +85,7 @@
     </footer>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav ul li a');
-
-
+    
     
             // Countdown Timer
             const eventDate = new Date('July 18, 2024 00:00:00').getTime(); // Correct event date
@@ -107,30 +103,9 @@
                     document.getElementById('timer').innerHTML = "Event Started";
                 }
             }, 1000);
-                // Active link highlighting
-                const updateActiveLink = (entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            navLinks.forEach(link => {
-                                link.classList.remove('active');
-                                if (document.querySelector(link.getAttribute('href')) === entry.target) {
-                                    link.classList.add('active');
-                                }
-                            });
-                        }
-                    });
-                };
-
-                const sectionObserver = new IntersectionObserver(updateActiveLink, {
-                    rootMargin: '-50% 0px -50% 0px'
-                });
-
-                sections.forEach(section => {
-                    sectionObserver.observe(section);
-                });
+               
 
        
-        });
     </script>
 
     
