@@ -70,6 +70,10 @@ footer a {
     gap: 1rem;
 }
 
+.next {
+    margin: 2rem;
+}
+
 .band {
     border: 1px solid #ddd;
     padding: 1rem;
