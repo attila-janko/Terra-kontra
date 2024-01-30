@@ -86,16 +86,22 @@
     
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section');
+        const hero = document.querySelector('.hero');
+        const navbar = document.querySelector('.navbar');
+        const navButton = document.createElement('button');
+
+        // Smooth scrolling
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
-    
+        });
+
             // Dynamic Navigation Highlighting
             window.addEventListener('scroll', () => {
                 let navigationLinks = document.querySelectorAll('nav ul li a');
