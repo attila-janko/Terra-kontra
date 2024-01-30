@@ -110,21 +110,6 @@
                 }
             }, 1000);
     
-            
-            // Gallery for Line-up
-                const lineup = [
-                    { name: 'Band A', image: 'img/band-a.jpg' },
-                    { name: 'Band B', image: 'img/band-b.jpg' },
-                    // More bands...
-                ];
-
-                
-                lineup.forEach(band => {
-                    const bandDiv = document.createElement('div');
-                    bandDiv.className = 'band';
-                    bandDiv.innerHTML = `<img src="${band.image}" alt="${band.name}"><p>${band.name}</p>`;
-                    gallery.appendChild(bandDiv);
-                });
 
                 // Animate sections on scroll
                 const observer = new IntersectionObserver((entries) => {
