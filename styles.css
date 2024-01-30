@@ -1,0 +1,87 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #7a216f;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('img/hero-background.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.event-details, .subscribe {
+    margin: 2rem;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: 1rem 0;
+    }
+}
+.nav-links a.active {
+    color: #d415a8;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.next {
+    margin: 2rem;
+}
+
+.band {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.countdown {
+    text-align: center;
+    margin-top: 2rem;
+}
+
