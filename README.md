@@ -1,2 +1,2 @@
 # Terra-kontra
-github site for Terra Kontra website and developments.
+github site for Terra Kontra website and developments..
