@@ -452,11 +452,17 @@
 			display: flex;
 			flex-direction: var(--navigation-layout-direction, initial);
 			flex-wrap: var(--navigation-layout-wrap, wrap);
-			justify-content: var(--navigation-layout-justify, initial)
+			justify-content: var(--navigation-layout-justify, initial);
+			gap: 20px; /* Using gap for modern browsers */
 		}
-
+	
 		.wp-block-navigation .wp-block-navigation-item {
-			background-color: inherit
+			background-color: inherit;
+			margin-right: 20px; /* Increase space between items */
+		}
+	
+		.wp-block-navigation .wp-block-navigation-item:last-child {
+			margin-right: 0; /* Remove extra margin on the last item */
 		}
 	</style>
 	<link crossorigin='anonymous' rel='stylesheet' id='all-css-6-1'
