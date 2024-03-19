@@ -1,0 +1,45 @@
+/* Reset some basic elements for consistency */
+html, body, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Example font, change as needed */
+    background-color: #000000; /* Light grey background, adjust as needed */
+}
+
+.image-gallery {
+    text-align: center; /* Center the images */
+    padding: 20px 0; /* Add some padding around the gallery */
+}
+
+.image-gallery img {
+    width: 90%; /* Make the images responsive */
+    max-width: 800px; /* Maximum width, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space between images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow around images */
+    border-radius: 8px; /* Optional: Rounds the corners of the images */
+}
+
+/* Simple navigation/back link */
+.nav-back {
+    display: block;
+    margin: 20px;
+    text-align: left; /* Align the navigation to the left */
+}
+
+.nav-back a {
+    text-decoration: none;
+    color: #ff0000; /* Dark grey color for the link */
+    font-size: 18px; /* Make the link a bit larger */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .image-gallery img {
+        width: 95%; /* Increase width on smaller screens */
+    }
+}
